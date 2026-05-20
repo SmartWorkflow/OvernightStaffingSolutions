@@ -1,400 +1,409 @@
- <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overnight Staffing Solutions | 24/7 Offshore Operations</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex Real Estate — Enterprise Analytics Portal</title>
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Vue 3 Interactive Runtime CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Tailwind Config Customizations for Dark Slate Themes -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              850: '#1e293b',
+              950: '#0f172a',
+            }
+          }
         }
-    </style>
+      }
+    }
+  </script>
 </head>
-<body class="min-h-screen bg-white text-slate-900 antialiased">
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen">
 
-    <section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-0 left-0 h-96 w-96 rounded-full bg-blue-500 blur-3xl"></div>
-            <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-400 blur-3xl"></div>
+  <div id="app" class="flex min-h-screen">
+    
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-slate-950 border-r border-slate-800 p-6 flex flex-col justify-between hidden md:flex">
+      <div>
+        <!-- Logo Branding -->
+        <div class="flex items-center gap-3 mb-10">
+          <div class="bg-blue-600 p-2 rounded-lg text-white shadow-lg shadow-blue-600/20">
+            <!-- Building Icon SVG -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 7v1a3 3 0 003 3h4a3 3 0 003-3V7m0-4h3a3 3 0 013 3v14M3 21h18M10 21V14a2 2 0 012-2h2a2 2 0 012 2v7"></path></svg>
+          </div>
+          <div>
+            <h1 class="font-bold text-lg leading-tight tracking-wide">VERTEX</h1>
+            <span class="text-xs text-blue-400 font-medium tracking-wider">REAL ESTATE</span>
+          </div>
+        </div>
+        
+        <!-- Navigation Routes -->
+        <nav class="space-y-1">
+          <a href="#" class="flex items-center gap-3 bg-slate-800 text-blue-400 px-4 py-3 rounded-xl font-medium text-sm transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            Enterprise Dashboard
+          </a>
+          <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-slate-200 hover:bg-slate-900 px-4 py-3 rounded-xl font-medium text-sm transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            Portfolio View
+          </a>
+          <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-slate-200 hover:bg-slate-900 px-4 py-3 rounded-xl font-medium text-sm transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            Investor Relations
+          </a>
+          <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-slate-200 hover:bg-slate-900 px-4 py-3 rounded-xl font-medium text-sm transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+            Risk Analytics
+          </a>
+        </nav>
+      </div>
+
+      <!-- Identity Badge -->
+      <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-tr from-blue-500 to-indigo-600 rounded-full flex items-center justify-center font-bold text-sm tracking-wide shadow-md">
+          MH
+        </div>
+        <div>
+          <p class="text-xs text-slate-400 font-medium">Enterprise Admin</p>
+          <p class="text-sm font-semibold text-slate-200">M. Hasan</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="flex-1 p-6 md:p-10 max-w-7xl mx-auto w-full">
+      
+      <!-- HEADER METRICS BAR -->
+      <header class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Portfolio Analytics</h2>
+          <p class="text-slate-400 text-sm mt-1">Real-time enterprise valuation tracking, deal pipeline, and baseline metrics.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2.5 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700 transition relative">
+            <svg class="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            <span class="absolute top-2 right-2 w-2 h-2 bg-blue-500 rounded-full"></span>
+          </button>
+          <button 
+            @click="isModalOpen = true"
+            class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-2.5 rounded-xl flex items-center gap-2 shadow-lg shadow-blue-600/10 transition-all text-sm"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
+            Add Asset
+          </button>
+        </div>
+      </header>
+
+      <!-- LIVE METRIC SUMMARY METERS -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <!-- Metric 1 -->
+        <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Total Portfolio Value</p>
+            <h3 class="text-2xl font-bold mt-2 text-white">$24.6M</h3>
+            <span class="text-xs text-emerald-400 flex items-center gap-1 mt-1 font-medium">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> +12.4% YoY
+            </span>
+          </div>
+          <div class="bg-blue-500/10 p-3 rounded-xl text-blue-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
         </div>
 
-        <div class="relative mx-auto max-w-7xl px-6 py-24 lg:flex lg:items-center lg:justify-between lg:px-12">
-            <div class="max-w-3xl">
-                <div class="mb-6 inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-200">
-                    24/7 Offshore Operations & Workforce Solutions
+        <!-- Metric 2 -->
+        <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Assets Under Mgmt</p>
+            <h3 class="text-2xl font-bold mt-2 text-white">{{ properties.length }} Active</h3>
+            <span class="text-xs text-slate-400 flex items-center gap-1 mt-1">Managed Diversified Blocks</span>
+          </div>
+          <div class="bg-indigo-500/10 p-3 rounded-xl text-indigo-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0V11m0 0h4m-4 0v3m4 0h-4m4 0v1m0 1c1.11 0 2.08-.402 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+        </div>
+
+        <!-- Metric 3 -->
+        <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Avg Portfolio Yield</p>
+            <h3 class="text-2xl font-bold mt-2 text-white">8.15%</h3>
+            <span class="text-xs text-emerald-400 flex items-center gap-1 mt-1 font-medium">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg> +0.4% baseline
+            </span>
+          </div>
+          <div class="bg-emerald-500/10 p-3 rounded-xl text-emerald-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          </div>
+        </div>
+
+        <!-- Metric 4 -->
+        <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Compliance Rating</p>
+            <h3 class="text-2xl font-bold mt-2 text-white">AAA</h3>
+            <span class="text-xs text-blue-400 flex items-center gap-1 mt-1 font-medium">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> Full Verification
+            </span>
+          </div>
+          <div class="bg-amber-500/10 p-3 rounded-xl text-amber-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- SYSTEM CONTROLS / FILTER UTILITIES -->
+      <section class="flex flex-col sm:flex-row gap-4 items-center justify-between mb-6 bg-slate-950 p-4 rounded-xl border border-slate-800">
+        <!-- Search -->
+        <div class="relative w-full sm:w-72">
+          <svg class="w-4 h-4 text-slate-500 absolute left-3 top-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input 
+            type="text" 
+            placeholder="Search asset title or location..." 
+            v-model="searchTerm"
+            class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-sm focus:outline-none focus:border-blue-500 transition text-slate-200 placeholder-slate-500"
+          />
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
+          <button
+            v-for="category in ['All', 'Commercial', 'Residential', 'Industrial', 'Retail']"
+            :key="category"
+            @click="filterType = category"
+            :class="filterType === category 
+              ? 'bg-blue-600 text-white border-blue-500 shadow-md shadow-blue-600/10' 
+              : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-slate-200'"
+            class="px-3 py-1.5 rounded-lg text-xs font-semibold tracking-wide border transition-all whitespace-nowrap"
+          >
+            {{ category }}
+          </button>
+        </div>
+      </section>
+
+      <!-- REAL ESTATE DYNAMIC MATRIX LISTINGS GRID -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          v-for="property in filteredProperties" 
+          :key="property.id" 
+          class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden hover:border-slate-700 transition group flex flex-col justify-between"
+        >
+          <div>
+            <!-- Banner Frame -->
+            <div class="relative h-48 overflow-hidden bg-slate-900">
+              <img 
+                :src="property.image" 
+                :alt="property.name" 
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <span 
+                :class="property.status === 'Active' ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'"
+                class="absolute top-4 right-4 text-xs font-bold px-2.5 py-1 rounded-md shadow-md"
+              >
+                {{ property.status }}
+              </span>
+              <span class="absolute bottom-4 left-4 text-[10px] uppercase font-bold tracking-widest bg-slate-950/80 text-blue-400 px-2 py-0.5 rounded backdrop-blur-sm">
+                {{ property.type }}
+              </span>
+            </div>
+
+            <!-- Content Details -->
+            <div class="p-5">
+              <h4 class="font-bold text-lg text-slate-100 mb-1 group-hover:text-blue-400 transition">{{ property.name }}</h4>
+              <p class="text-slate-400 text-xs flex items-center gap-1 mb-4">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                {{ property.location }}
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 border-t border-slate-900 pt-4">
+                <div>
+                  <p class="text-[10px] uppercase text-slate-500 tracking-wider">Gross Valuation</p>
+                  <p class="text-sm font-bold text-white mt-0.5">{{ property.price }}</p>
                 </div>
-
-                <h1 class="text-5xl font-black leading-tight tracking-tight lg:text-7xl">
-                    Build a
-                    <span class="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"> 24/7 Workforce </span>
-                    Without Building a Large In-House Team.
-                </h1>
-
-                <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-300 lg:text-xl">
-                    Overnight Staffing Solutions helps businesses eliminate time zone bottlenecks,
-                    streamline complex workflows, and scale operations with highly trained offshore
-                    teams that work while you sleep.
-                </p>
-
-                <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-                    <a href="#contact" class="rounded-2xl bg-blue-600 px-8 py-4 text-center text-lg font-semibold text-white shadow-2xl transition hover:bg-blue-500">
-                        Book Free Consultation
-                    </a>
-                    <a href="#services" class="rounded-2xl border border-white/20 bg-white/5 px-8 py-4 text-center text-lg font-semibold backdrop-blur transition hover:bg-white/10">
-                        Explore Services
-                    </a>
+                <div>
+                  <p class="text-[10px] uppercase text-slate-500 tracking-wider">Target Yield</p>
+                  <p class="text-sm font-bold text-emerald-400 mt-0.5">{{ property.ROI }} ROI</p>
                 </div>
-
-                <div class="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-                        <div class="text-3xl font-black text-cyan-300">24/7</div>
-                        <div class="mt-2 text-sm text-slate-300">Coverage</div>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-                        <div class="text-3xl font-black text-cyan-300">70%</div>
-                        <div class="mt-2 text-sm text-slate-300">Lower Operating Cost</div>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-                        <div class="text-3xl font-black text-cyan-300">3x</div>
-                        <div class="mt-2 text-sm text-slate-300">Faster Workflow Turnaround</div>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-                        <div class="text-3xl font-black text-cyan-300">100+</div>
-                        <div class="mt-2 text-sm text-slate-300">Skilled Offshore Staff</div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
 
-            <div class="mt-16 lg:mt-0 lg:w-[480px]">
-                <div class="rounded-3xl border border-white/10 bg-white/10 p-8 shadow-2xl backdrop-blur-xl">
-                    <div class="mb-6 flex items-center justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold">Global Operations Dashboard</h3>
-                            <p class="text-sm text-slate-300">Always online. Always moving.</p>
-                        </div>
-                        <div class="h-4 w-4 rounded-full bg-green-400"></div>
-                    </div>
-
-                    <div class="space-y-5">
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/50 p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <div class="font-semibold">Customer Support</div>
-                                    <div class="mt-1 text-sm text-slate-400">98% SLA Met</div>
-                                </div>
-                                <div class="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-300">Active</div>
-                            </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/50 p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <div class="font-semibold">Back Office Processing</div>
-                                    <div class="mt-1 text-sm text-slate-400">Running Smoothly</div>
-                                </div>
-                                <div class="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-300">Active</div>
-                            </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/50 p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <div class="font-semibold">Lead Qualification</div>
-                                    <div class="mt-1 text-sm text-slate-400">2,340 Tasks Completed</div>
-                                </div>
-                                <div class="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-300">Active</div>
-                            </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-white/10 bg-slate-900/50 p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <div class="font-semibold">Administrative Support</div>
-                                    <div class="mt-1 text-sm text-slate-400">24 Active Specialists</div>
-                                </div>
-                                <div class="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-300">Active</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="border-b border-slate-200 bg-slate-50 py-10">
-        <div class="mx-auto max-w-7xl px-6 lg:px-12">
-            <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-                Trusted By Fast-Growing Companies Worldwide
-            </p>
-
-            <div class="mt-8 grid grid-cols-2 gap-6 text-center md:grid-cols-5">
-                <div class="rounded-2xl border border-slate-200 bg-white px-6 py-5 text-lg font-bold shadow-sm">Real Estate</div>
-                <div class="rounded-2xl border border-slate-200 bg-white px-6 py-5 text-lg font-bold shadow-sm">E-Commerce</div>
-                <div class="rounded-2xl border border-slate-200 bg-white px-6 py-5 text-lg font-bold shadow-sm">Healthcare</div>
-                <div class="rounded-2xl border border-slate-200 bg-white px-6 py-5 text-lg font-bold shadow-sm">Logistics</div>
-                <div class="rounded-2xl border border-slate-200 bg-white px-6 py-5 text-lg font-bold shadow-sm">SaaS Companies</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="mx-auto max-w-7xl px-6 py-24 lg:px-12">
-        <div class="max-w-3xl">
-            <div class="text-sm font-bold uppercase tracking-[0.25em] text-blue-600">What We Do</div>
-            <h2 class="mt-4 text-4xl font-black leading-tight lg:text-5xl">
-                Offshore Teams Designed To Operate Like An Extension Of Your Company.
-            </h2>
-            <p class="mt-6 text-lg leading-8 text-slate-600">
-                We recruit, train, manage, and optimize offshore teams so you can focus on scaling
-                revenue, improving operations, and serving customers around the clock.
-            </p>
+          <!-- Bottom Footer Action Component -->
+          <div class="px-5 pb-5 pt-2">
+            <button class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium py-2 rounded-xl text-xs border border-slate-800 transition flex items-center justify-center gap-1">
+              View Asset Ledger 
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
         </div>
 
-        <div class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
-                <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl">⚡</div>
-                <h3 class="text-2xl font-bold">24/7 Customer Support</h3>
-                <p class="mt-4 leading-7 text-slate-600">Provide nonstop customer service coverage across multiple time zones with professionally trained support teams.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
-                <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl">⚡</div>
-                <h3 class="text-2xl font-bold">Back Office Operations</h3>
-                <p class="mt-4 leading-7 text-slate-600">Manage repetitive and operationally heavy tasks with precision-driven offshore specialists.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
-                <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl">⚡</div>
-                <h3 class="text-2xl font-bold">Lead Qualification & Outreach</h3>
-                <p class="mt-4 leading-7 text-slate-600">Scale lead management, prospect qualification, CRM updates, and outreach campaigns efficiently.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
-                <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl">⚡</div>
-                <h3 class="text-2xl font-bold">Administrative Support</h3>
-                <p class="mt-4 leading-7 text-slate-600">Virtual assistants, scheduling, inbox management, data entry, reporting, and operational support.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
-                <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl">⚡</div>
-                <h3 class="text-2xl font-bold">Workflow Optimization</h3>
-                <p class="mt-4 leading-7 text-slate-600">We audit your existing processes and build streamlined operational systems for faster execution.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
-                <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl">⚡</div>
-                <h3 class="text-2xl font-bold">Dedicated Offshore Teams</h3>
-                <p class="mt-4 leading-7 text-slate-600">Build fully managed offshore departments without the overhead of hiring and infrastructure.</p>
-            </div>
+        <!-- No Results Fallback Slate -->
+        <div 
+          v-if="filteredProperties.length === 0" 
+          class="col-span-full bg-slate-950 border border-dashed border-slate-800 rounded-2xl p-12 text-center text-slate-500"
+        >
+          No institutional enterprise properties match your filter query parameters.
         </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="bg-slate-950 py-24 text-white">
-        <div class="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:px-12">
+    <!-- NEW ASSET ACQUISITION MODAL -->
+    <div 
+      v-if="isModalOpen" 
+      class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+    >
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 w-full max-w-md shadow-2xl">
+        <h3 class="text-xl font-bold mb-4 text-white tracking-tight">Pipeline New Asset</h3>
+        
+        <form @submit.prevent="handleAddProperty" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Property / Asset Title</label>
+            <input 
+              type="text" required
+              v-model="newProp.name"
+              placeholder="e.g., Century Office Plaza"
+              class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
             <div>
-                <div class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Why Overnight Staffing Solutions</div>
-                <h2 class="mt-4 text-4xl font-black leading-tight lg:text-5xl">Reduce Operational Pressure While Scaling Faster.</h2>
-                <p class="mt-6 text-lg leading-8 text-slate-300">
-                    We combine offshore staffing, workflow management, and operational systems into one
-                    scalable solution that helps businesses grow without burning internal resources.
-                </p>
-
-                <div class="mt-10 space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-cyan-400 text-sm font-bold text-slate-900">✓</div>
-                        <div class="text-lg text-slate-200">Pre-trained offshore specialists</div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-cyan-400 text-sm font-bold text-slate-900">✓</div>
-                        <div class="text-lg text-slate-200">Dedicated account and operations management</div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-cyan-400 text-sm font-bold text-slate-900">✓</div>
-                        <div class="text-lg text-slate-200">Rapid team deployment and onboarding</div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-cyan-400 text-sm font-bold text-slate-900">✓</div>
-                        <div class="text-lg text-slate-200">Flexible scaling based on workload</div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-cyan-400 text-sm font-bold text-slate-900">✓</div>
-                        <div class="text-lg text-slate-200">Continuous reporting and workflow tracking</div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-cyan-400 text-sm font-bold text-slate-900">✓</div>
-                        <div class="text-lg text-slate-200">Cost-effective long-term operations</div>
-                    </div>
-                </div>
+              <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Sector Type</label>
+              <select 
+                v-model="newProp.type"
+                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500"
+              >
+                <option>Commercial</option>
+                <option>Residential</option>
+                <option>Industrial</option>
+                <option>Retail</option>
+              </select>
             </div>
-
-            <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
-                <div class="mb-8 flex items-center justify-between">
-                    <div>
-                        <div class="text-sm text-slate-400">Average Client Results</div>
-                        <div class="mt-2 text-3xl font-black">Operational Growth Metrics</div>
-                    </div>
-                </div>
-
-                <div class="space-y-8">
-                    <div>
-                        <div class="mb-3 flex justify-between text-sm font-semibold text-slate-300">
-                            <span>Reduced Staffing Cost</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="h-3 overflow-hidden rounded-full bg-white/10">
-                            <div class="h-full w-[70%] rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="mb-3 flex justify-between text-sm font-semibold text-slate-300">
-                            <span>Faster Turnaround Time</span>
-                            <span>3X</span>
-                        </div>
-                        <div class="h-3 overflow-hidden rounded-full bg-white/10">
-                            <div class="h-full w-[90%] rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="mb-3 flex justify-between text-sm font-semibold text-slate-300">
-                            <span>Operational Coverage</span>
-                            <span>24/7</span>
-                        </div>
-                        <div class="h-3 overflow-hidden rounded-full bg-white/10">
-                            <div class="h-full w-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="mb-3 flex justify-between text-sm font-semibold text-slate-300">
-                            <span>Team Deployment Speed</span>
-                            <span>7 Days</span>
-                        </div>
-                        <div class="h-3 overflow-hidden rounded-full bg-white/10">
-                            <div class="h-full w-[85%] rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mx-auto max-w-7xl px-6 py-24 lg:px-12">
-        <div class="text-center">
-            <div class="text-sm font-bold uppercase tracking-[0.25em] text-blue-600">Simple Process</div>
-            <h2 class="mt-4 text-4xl font-black lg:text-5xl">How We Help You Scale Operations</h2>
-        </div>
-
-        <div class="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-                <div class="text-5xl font-black text-blue-200">01</div>
-                <h3 class="mt-6 text-2xl font-bold">Discovery Call</h3>
-                <p class="mt-4 leading-7 text-slate-600">We analyze your current workflows, bottlenecks, and operational needs.</p>
-            </div>
-
-            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-                <div class="text-5xl font-black text-blue-200">02</div>
-                <h3 class="mt-6 text-2xl font-bold">Team Planning</h3>
-                <p class="mt-4 leading-7 text-slate-600">We design the ideal offshore staffing structure for your business.</p>
-            </div>
-
-            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-                <div class="text-5xl font-black text-blue-200">03</div>
-                <h3 class="mt-6 text-2xl font-bold">Deployment</h3>
-                <p class="mt-4 leading-7 text-slate-600">Your offshore team is recruited, trained, and integrated into operations.</p>
-            </div>
-
-            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-                <div class="text-5xl font-black text-blue-200">04</div>
-                <h3 class="mt-6 text-2xl font-bold">Optimization</h3>
-                <p class="mt-4 leading-7 text-slate-600">We continuously improve workflow efficiency and operational performance.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gradient-to-r from-blue-700 to-cyan-600 py-24 text-white">
-        <div class="mx-auto max-w-5xl px-6 text-center lg:px-12">
-            <h2 class="text-4xl font-black leading-tight lg:text-6xl">Stop Losing Productivity To Time Zones.</h2>
-            <p class="mx-auto mt-8 max-w-3xl text-xl leading-8 text-blue-100">
-                Build a scalable, always-on operation with dedicated offshore teams that keep your
-                business moving 24 hours a day.
-            </p>
-
-            <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                <a href="#contact" class="rounded-2xl bg-white px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-slate-100">
-                    Schedule Consultation
-                </a>
-                <a href="mailto:hello@overnightstaffingsolutions.com" class="rounded-2xl border border-white/30 px-8 py-4 text-lg font-bold transition hover:bg-white/10">
-                    Contact Our Team
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="mx-auto max-w-7xl px-6 py-24 lg:px-12">
-        <div class="grid gap-16 lg:grid-cols-2">
             <div>
-                <div class="text-sm font-bold uppercase tracking-[0.25em] text-blue-600">Contact Us</div>
-                <h2 class="mt-4 text-4xl font-black lg:text-5xl">Ready To Build Your Offshore Team?</h2>
-                <p class="mt-6 text-lg leading-8 text-slate-600">
-                    Let’s discuss your workflows, operational challenges, and growth goals. We’ll create
-                    a scalable staffing strategy tailored to your business.
-                </p>
-
-                <div class="mt-10 space-y-6 text-lg">
-                    <div><span class="font-bold">Email:</span> hello@overnightstaffingsolutions.com</div>
-                    <div><span class="font-bold">Availability:</span> 24/7 Global Coverage</div>
-                    <div><span class="font-bold">Services:</span> Offshore Staffing, Operations, Workflow Management</div>
-                </div>
+              <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Valuation ($)</label>
+              <input 
+                type="text" required
+                v-model="newProp.price"
+                placeholder="e.g., $3,400,000"
+                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500"
+              />
             </div>
+          </div>
 
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl">
-                <form id="consultationForm" class="space-y-6">
-                    <div>
-                        <label class="mb-2 block font-semibold">Full Name</label>
-                        <input type="text" required placeholder="John Smith" class="w-full rounded-2xl border border-slate-300 px-5 py-4 outline-none transition focus:border-blue-500">
-                    </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Location Marker</label>
+            <input 
+              type="text" required
+              v-model="newProp.location"
+              placeholder="City, State"
+              class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500"
+            />
+          </div>
 
-                    <div>
-                        <label class="mb-2 block font-semibold">Company Email</label>
-                        <input type="email" required placeholder="john@company.com" class="w-full rounded-2xl border border-slate-300 px-5 py-4 outline-none transition focus:border-blue-500">
-                    </div>
-
-                    <div>
-                        <label class="mb-2 block font-semibold">Company Name</label>
-                        <input type="text" required placeholder="Your Company" class="w-full rounded-2xl border border-slate-300 px-5 py-4 outline-none transition focus:border-blue-500">
-                    </div>
-
-                    <div>
-                        <label class="mb-2 block font-semibold">Tell Us About Your Needs</label>
-                        <textarea rows="5" required placeholder="Describe your operational challenges, staffing requirements, or workflows..." class="w-full rounded-2xl border border-slate-300 px-5 py-4 outline-none transition focus:border-blue-500"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full rounded-2xl bg-slate-950 px-6 py-4 text-lg font-bold text-white transition hover:bg-slate-800">
-                        Request Free Consultation
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="border-t border-slate-200 bg-slate-50 py-10">
-        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-center lg:flex-row lg:px-12 lg:text-left">
+          <div class="grid grid-cols-2 gap-4">
             <div>
-                <div class="text-2xl font-black">Overnight Staffing Solutions</div>
-                <div class="mt-2 text-slate-600">Offshore staffing and operational support built for modern businesses.</div>
+              <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Gross Capacity</label>
+              <input 
+                type="text" required
+                v-model="newProp.area"
+                placeholder="e.g., 14,000 sq ft"
+                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500"
+              />
             </div>
-            <div class="text-sm text-slate-500">
-                &copy; 2026 Overnight Staffing Solutions. All rights reserved.
+            <div>
+              <label class="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wide">Target Yield (%)</label>
+              <input 
+                type="text" required
+                v-model="newProp.ROI"
+                placeholder="e.g., 7.5%"
+                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500"
+              />
             </div>
-        </div>
-    </footer>
+          </div>
 
-    <script>
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for reaching out! Your consultation request has been logged. Our team will contact you within 24 hours.');
-            this.reset();
+          <!-- Actions Footer Buttons -->
+          <div class="flex items-center justify-end gap-3 pt-4">
+            <button 
+              type="button"
+              @click="isModalOpen = false"
+              class="bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-200 px-4 py-2 rounded-xl text-sm font-medium transition"
+            >
+              Cancel
+            </button>
+            <button 
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-medium transition shadow-md shadow-blue-600/10"
+            >
+              Commit Asset
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Interactive JavaScript Module -->
+  <script>
+    const { createApp, ref, computed } = Vue;
+
+    createApp({
+      setup() {
+        const isModalOpen = ref(false);
+        const filterType = ref('All');
+        const searchTerm = ref('');
+        
+        // Institutional Real Estate Pool Vector Data
+        const properties = ref([
+          { id: 1, name: "Skyline Corporate Tower", location: "Manhattan, NY", type: "Commercial", price: "$4,500,000", status: "Active", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80", area: "45,000 sq ft", ROI: "8.4%" },
+          { id: 2, name: "Oakridge Luxury Estates", location: "Beverly Hills, CA", type: "Residential", price: "$2,800,000", status: "Pending", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80", area: "6,200 sq ft", ROI: "6.2%" },
+          { id: 3, name: "Apex Logistics Hub", location: "Austin, TX", type: "Industrial", price: "$8,200,000", status: "Active", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80", area: "120,000 sq ft", ROI: "10.1%" },
+          { id: 4, name: "The Beacon Mixed-Use", location: "Seattle, WA", type: "Retail", price: "$5,100,000", status: "Active", image: "https://images.unsplash.com/photo-1479839672679-a46451c09441?auto=format&fit=crop&w=800&q=80", area: "22,000 sq ft", ROI: "7.9%" }
+        ]);
+
+        const newProp = ref({
+          name: '', location: '', type: 'Commercial', price: '', area: '', ROI: '', status: 'Active',
+          image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80'
         });
-    </script>
+
+        const handleAddProperty = () => {
+          properties.value.push({
+            ...newProp.value,
+            id: Date.now()
+          });
+          // Reset Modal Interface Matrix
+          isModalOpen.value = false;
+          newProp.value = {
+            name: '', location: '', type: 'Commercial', price: '', area: '', ROI: '', status: 'Active',
+            image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80'
+          };
+        };
+
+        const filteredProperties = computed(() => {
+          return properties.value.filter(p => {
+            const matchesFilter = filterType.value === 'All' || p.type === filterType.value;
+            const matchesSearch = p.name.toLowerCase().includes(searchTerm.value.toLowerCase()) || 
+                                  p.location.toLowerCase().includes(searchTerm.value.toLowerCase());
+            return matchesFilter && matchesSearch;
+          });
+        });
+
+        return {
+          isModalOpen,
+          filterType,
+          searchTerm,
+          properties,
+          newProp,
+          handleAddProperty,
+          filteredProperties
+        }
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
